@@ -125,7 +125,7 @@ By default there is a 7 minute time limit, this can be changed by altering the `
 ## Optional, additional controls on another machine - piborgSpaceAgency.py
 This script provides an emergency off and the ability to reset the timer to start a new mission.
 
-It is entirely optional and can be run on any machine (Windows, Mac, Linux, Raspberry Pi) with Python and Tkinter available.
+It is entirely optional and can be run on any machine (Windows, Mac, Linux, Raspberry Pi) with Python and [Tkinter](https://wiki.python.org/moin/TkInter) available.
 For this GUI to work it needs to have `REMOTE_IP` changed to the IP address of the Raspberry Pi attached to the touchscreen.
 
 It also needs to be on a machine connected to the same network as the robot.
