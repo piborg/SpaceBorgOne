@@ -1,18 +1,18 @@
 # SpaceBorgOne
-Our code for controlling a DiddyBorg on Mars via a Raspberry Pi touchscreen.
+This is [PiBorg's](https://www.piborg.org) code for controlling a [DiddyBorg](https://www.piborg.org/diddyborg) on Mars via a Raspberry Pi touchscreen.
 
 For those who did not see us at the Raspberry Pi 4th Birthday Bash this was our challenge for controlling a Mars rover.
 It consists of three scripts:
 
-1 - The Touchscreen UI, commandCentre.py:
+1 - The Touchscreen UI, `commandCentre.py`:
 
 ![](screenshot.png?raw=true)
 
-2 - The robot motion script, spaceBorgOne.py:
+2 - The robot motion script, `spaceBorgOne.py`:
 
 ![](we-come-in-peace.jpg?raw=true)
 
-3 - An additional set of optional controls, piborgSpaceAgency.py:
+3 - An additional set of optional controls, `piborgSpaceAgency.py`:
 
 ![](screenshot2.png?raw=true)
 
