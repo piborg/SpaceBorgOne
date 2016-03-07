@@ -19,7 +19,7 @@ It consists of three scripts:
 # What you need
 ## The robot
 For the script to work as-is you will want a [DiddyBorg](https://www.piborg.org/diddyborg) with a Raspberry Pi camera attached.
-It will also work with any PicoBorg Reverse based robot by changing the `spaceBorgOne.py` script slightly as explained later.
+It will also work with any [PicoBorg Reverse](https://www.piborg.org/picoborgrev) based robot by changing the `spaceBorgOne.py` script slightly as explained later.
 For other robots the `spaceBorgOne.py` script will need to be changed to drive the motors correctly.
 
 You will also need:
