@@ -3,6 +3,7 @@ Our code for controlling a DiddyBorg on Mars via a Raspberry Pi touchscreen.
 
 For those who did not see us at the Raspberry Pi 4th Birthday Bash this was our challenge for controlling a Mars rover.
 It consists of three scripts:
+
 1. The Touchscreen UI, commandCentre.py:
 ![](screenshot.png?raw=true)
 2. The robot motion script, spaceBorgOne.py:
@@ -49,9 +50,9 @@ Before running the script we need to change `voltageIn` and `voltageOut` for the
 * With DiddyBorg Red Edition change to
 `voltageOut = 12.0 * 0.95`
 * With DiddyBorg Metal Edition change to
-```voltageIn = 1.2 * 12
-voltageOut = 12.0
-```
+`voltageIn = 1.2 * 12`
+`voltageOut = 12.0`
+
 * With 4Borg change to
 `voltageIn = 8.4`
 * For other PicoBorg Reverse robots make `voltageIn` the total battery voltage and `voltageOut` the voltage used for the motors
@@ -69,6 +70,7 @@ You can run the script once using SSH or a keyboard by using this command:
 To run the script when the Raspberry Pi starts add this line to `rc.local`:
 ```/home/pi/SpaceBorgOne/spaceBorgOne.py &
 ```
+
 See [this guide](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md) more more detail on how.
 
 ## On the touchscreen - commandCentre.py
