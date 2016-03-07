@@ -4,24 +4,22 @@ Our code for controlling a DiddyBorg on Mars via a Raspberry Pi touchscreen.
 For those who did not see us at the Raspberry Pi 4th Birthday Bash this was our challenge for controlling a Mars rover.
 It consists of three scripts:
 
-1. The Touchscreen UI, commandCentre.py:
+1 - The Touchscreen UI, commandCentre.py:
 
 ![](screenshot.png?raw=true)
 
-2. The robot motion script, spaceBorgOne.py:
+2 - The robot motion script, spaceBorgOne.py:
 
 ![](we-come-in-peace.jpg?raw=true)
 
-3. An additional set of optional controls, piborgSpaceAgency.py:
+3 - An additional set of optional controls, piborgSpaceAgency.py:
 
 ![](screenshot2.png?raw=true)
 
 # What you need
 ## The robot
 For the script to work as-is you will want a [DiddyBorg](https://www.piborg.org/diddyborg) with a Raspberry Pi camera attached.
-
 It will also work with any PicoBorg Reverse based robot by changing the `spaceBorgOne.py` script slightly as explained later.
-
 For other robots the `spaceBorgOne.py` script will need to be changed to drive the motors correctly.
 
 You will also need:
@@ -30,17 +28,13 @@ You will also need:
 * The Raspberry Pi attached to a WiFi network
 * The IP address of the Raspberry Pi
 
-You can find out what your IP address is using the `ifconfig` command
-
-It should be 4 numbers separated by dots, e.g. `192.168.0.198`
-
-We will need this number to change the `commandCentre.py` script later, so make a note of it
+You can find out what your IP address is using the `ifconfig` command.
+It should be 4 numbers separated by dots, e.g. `192.168.0.198`.
+We will need this number to change the `commandCentre.py` script later, so make a note of it.
 
 ## The touchscreen
 You will want a Raspberry Pi with a touchscreen already setup and running.
-
 The only other thing you will need is a connection to the same network as the robot via Ethernet or WiFi.
-
 We recommend using Ethernet for the best results.
 
 ## Downloading the code
@@ -49,8 +43,7 @@ You will need the code on both the touchscreen Raspberry Pi and the robot.
 To get the code we will clone this repository to the Raspberry Pi.
 
 In a terminal run the following commands:
-```
-bash
+```bash
 cd ~
 git clone https://github.com/piborg/SpaceBorgOne.git
 ```
@@ -62,14 +55,25 @@ This script moves the robot around in the programmed sequence.
 
 Before running the script we need to change `voltageIn` and `voltageOut` for the robot:
 * With DiddyBorg no changes are needed
-* With DiddyBorg Red Edition change to
-`voltageOut = 12.0 * 0.95`
-* With DiddyBorg Metal Edition change to
-`voltageIn = 1.2 * 12`
-`voltageOut = 12.0`
+* With DiddyBorg Red Edition change to:
+
+```
+voltageOut = 12.0 * 0.95
+```
+
+* With DiddyBorg Metal Edition change to:
+
+```
+voltageIn = 1.2 * 12
+voltageOut = 12.0
+```
 
 * With 4Borg change to
-`voltageIn = 8.4`
+
+```
+voltageIn = 8.4
+```
+
 * For other PicoBorg Reverse robots make `voltageIn` the total battery voltage and `voltageOut` the voltage used for the motors
 * Any other robots will need to replace the `PBR` lines with the correct code for controlling the motors on the robot
 
@@ -122,16 +126,11 @@ By default there is a 7 minute time limit, this can be changed by altering the `
 This script provides an emergency off and the ability to reset the timer to start a new mission.
 
 It is entirely optional and can be run on any machine (Windows, Mac, Linux, Raspberry Pi) with Python and Tkinter available.
-
 For this GUI to work it needs to have `REMOTE_IP` changed to the IP address of the Raspberry Pi attached to the touchscreen.
 
 It also needs to be on a machine connected to the same network as the robot.
-
 Simply run the script to get a set of mission buttons and an end turn button.
 
-
 Pressing the end turn button will stop the robot and show a mission failure on the touchscreen.
-
 Pressing a mission button will send a new mission to the touchscreen and reset the timer.
-
 The text box and the button below allow for sending custom missions.
