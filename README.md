@@ -1,7 +1,7 @@
 # SpaceBorgOne
 This is [PiBorg's](https://www.piborg.org) code for controlling a [DiddyBorg](https://www.piborg.org/diddyborg) on Mars via a Raspberry Pi touchscreen.
 
-For those who did not see us at the Raspberry Pi 4th Birthday Bash this was our challenge for controlling a Mars rover.
+For those who did not see us at the [Raspberry Pi 4th Birthday Bash](https://www.raspberrypi.org/blog/page/4/?fish#come-to-our-fourth-birthday-party) this was our challenge for controlling a Mars rover.
 It consists of three scripts:
 
 1 - The Touchscreen UI, `commandCentre.py`:
@@ -18,7 +18,7 @@ It consists of three scripts:
 
 # What you need
 ## The robot
-For the script to work as-is you will want a [DiddyBorg](https://www.piborg.org/diddyborg) with a Raspberry Pi camera attached.
+For the script to work as-is you will want a DiddyBorg with a Raspberry Pi camera attached.
 It will also work with any [PicoBorg Reverse](https://www.piborg.org/picoborgrev) based robot by changing the `spaceBorgOne.py` script slightly as explained later.
 For other robots the `spaceBorgOne.py` script will need to be changed to drive the motors correctly.
 
@@ -55,7 +55,7 @@ This script moves the robot around in the programmed sequence.
 
 Before running the script we need to change `voltageIn` and `voltageOut` for the robot:
 * With DiddyBorg no changes are needed
-* With DiddyBorg Red Edition change to:
+* With [DiddyBorg Red Edition](https://www.piborg.org/diddyborg/rededition) change to:
 
 ```
 voltageOut = 12.0 * 0.95
@@ -68,7 +68,7 @@ voltageIn = 1.2 * 12
 voltageOut = 12.0
 ```
 
-* With 4Borg change to
+* With [4Borg](https://www.piborg.org/4borg) change to
 
 ```
 voltageIn = 8.4
