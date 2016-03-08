@@ -327,72 +327,72 @@ class CommandCentre_tk(Tkinter.Tk):
 
         self.controlButtons = []
 
-        self.but1 = Tkinter.Button(self, text = '1', command = self.but1_click)
+        self.but1 = Tkinter.Button(self, text = '1', command = lambda: self.AddNumber(1))
         self.but1['font'] = ('Trebuchet', 12, 'bold')
         self.but1.place(relx = 0.0, rely = 0.0, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but1)
 
-        self.but2 = Tkinter.Button(self, text = '2', command = self.but2_click)
+        self.but2 = Tkinter.Button(self, text = '2', command = lambda: self.AddNumber(2))
         self.but2['font'] = ('Trebuchet', 12, 'bold')
         self.but2.place(relx = posThird, rely = 0.0, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but2)
 
-        self.but3 = Tkinter.Button(self, text = '3', command = self.but3_click)
+        self.but3 = Tkinter.Button(self, text = '3', command = lambda: self.AddNumber(3))
         self.but3['font'] = ('Trebuchet', 12, 'bold')
         self.but3.place(relx = posTwoThird, rely = 0.0, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but3)
 
-        self.but4 = Tkinter.Button(self, text = '4', command = self.but4_click)
+        self.but4 = Tkinter.Button(self, text = '4', command = lambda: self.AddNumber(4))
         self.but4['font'] = ('Trebuchet', 12, 'bold')
         self.but4.place(relx = 0.0, rely = 0.1, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but4)
 
-        self.but5 = Tkinter.Button(self, text = '5', command = self.but5_click)
+        self.but5 = Tkinter.Button(self, text = '5', command = lambda: self.AddNumber(5))
         self.but5['font'] = ('Trebuchet', 12, 'bold')
         self.but5.place(relx = posThird, rely = 0.1, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but5)
 
-        self.but6 = Tkinter.Button(self, text = '6', command = self.but6_click)
+        self.but6 = Tkinter.Button(self, text = '6', command = lambda: self.AddNumber(6))
         self.but6['font'] = ('Trebuchet', 12, 'bold')
         self.but6.place(relx = posTwoThird, rely = 0.1, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but6)
 
-        self.but7 = Tkinter.Button(self, text = '7', command = self.but7_click)
+        self.but7 = Tkinter.Button(self, text = '7', command = lambda: self.AddNumber(7))
         self.but7['font'] = ('Trebuchet', 12, 'bold')
         self.but7.place(relx = 0.0, rely = 0.2, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but7)
 
-        self.but8 = Tkinter.Button(self, text = '8', command = self.but8_click)
+        self.but8 = Tkinter.Button(self, text = '8', command = lambda: self.AddNumber(8))
         self.but8['font'] = ('Trebuchet', 12, 'bold')
         self.but8.place(relx = posThird, rely = 0.2, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but8)
 
-        self.but9 = Tkinter.Button(self, text = '9', command = self.but9_click)
+        self.but9 = Tkinter.Button(self, text = '9', command = lambda: self.AddNumber(9))
         self.but9['font'] = ('Trebuchet', 12, 'bold')
         self.but9.place(relx = posTwoThird, rely = 0.2, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but9)
 
-        self.but0 = Tkinter.Button(self, text = '0', command = self.but0_click)
+        self.but0 = Tkinter.Button(self, text = '0', command = lambda: self.AddNumber(0))
         self.but0['font'] = ('Trebuchet', 12, 'bold')
         self.but0.place(relx = posThird, rely = 0.3, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.but0)
 
-        self.butForward = Tkinter.Button(self, text = '↑', command = self.butForward_click)
+        self.butForward = Tkinter.Button(self, text = '↑', command = lambda: self.AddMove('FD'))
         self.butForward['font'] = ('Trebuchet', 12, 'bold')
         self.butForward.place(relx = posThird, rely = 0.45, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.butForward)
 
-        self.butLeft = Tkinter.Button(self, text = '←', command = self.butLeft_click)
+        self.butLeft = Tkinter.Button(self, text = '←', command = lambda: self.AddMove('LT'))
         self.butLeft['font'] = ('Trebuchet', 12, 'bold')
         self.butLeft.place(relx = 0.0, rely = 0.5, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.butLeft)
 
-        self.butRight = Tkinter.Button(self, text = '→', command = self.butRight_click)
+        self.butRight = Tkinter.Button(self, text = '→', command = lambda: self.AddMove('RT'))
         self.butRight['font'] = ('Trebuchet', 12, 'bold')
         self.butRight.place(relx = posTwoThird, rely = 0.5, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.butRight)
 
-        self.butReverse = Tkinter.Button(self, text = '↓', command = self.butReverse_click)
+        self.butReverse = Tkinter.Button(self, text = '↓', command = lambda: self.AddMove('BK'))
         self.butReverse['font'] = ('Trebuchet', 12, 'bold')
         self.butReverse.place(relx = posThird, rely = 0.55, relwidth = sizeThird, relheight = 0.1)
         self.controlButtons.append(self.butReverse)
@@ -638,62 +638,6 @@ class CommandCentre_tk(Tkinter.Tk):
         self.lblRemainingTime['text'] = self.mission + '\n\nMars is now in alignment'
         SetStatus(self, STATUS_WAITNG)
         startTime = time.time() + (TRANSMISSION_LAG_MS / 1000.0)
-    
-    # Called when but1 is clicked
-    def but1_click(self):
-        self.AddNumber(1)
-    
-    # Called when but2 is clicked
-    def but2_click(self):
-        self.AddNumber(2)
-    
-    # Called when but3 is clicked
-    def but3_click(self):
-        self.AddNumber(3)
-    
-    # Called when but4 is clicked
-    def but4_click(self):
-        self.AddNumber(4)
-    
-    # Called when but5 is clicked
-    def but5_click(self):
-        self.AddNumber(5)
-    
-    # Called when but6 is clicked
-    def but6_click(self):
-        self.AddNumber(6)
-    
-    # Called when but7 is clicked
-    def but7_click(self):
-        self.AddNumber(7)
-    
-    # Called when but8 is clicked
-    def but8_click(self):
-        self.AddNumber(8)
-    
-    # Called when but9 is clicked
-    def but9_click(self):
-        self.AddNumber(9)
-    
-    # Called when but0 is clicked
-    def but0_click(self):
-        self.AddNumber(0)
-    
-    # Called when butForward is clicked
-    def butForward_click(self):
-        self.AddMove('FD')
-    
-    # Called when butLeft is clicked
-    def butLeft_click(self):
-        self.AddMove('LT')
-    
-    # Called when butRight is clicked
-    def butRight_click(self):
-        self.AddMove('RT')
-    
-    # Called when butReverse is clicked
-    def butReverse_click(self):
-        self.AddMove('BK')
     
     # Called when butAbort is clicked
     def butAbort_click(self):
